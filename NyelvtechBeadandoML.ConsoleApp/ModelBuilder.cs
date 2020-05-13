@@ -12,7 +12,7 @@ namespace NyelvtechBeadandoML.ConsoleApp
 {
     public static class ModelBuilder
     {
-        private static string TRAIN_DATA_FILEPATH = @"C:\Users\balint\OneDrive\itk\Nyelvtech\beadando\HU\train.tsv";
+        private static string TRAIN_DATA_FILEPATH = @"C:\Users\balint\OneDrive\itk\Nyelvtech\beadando\HU\NyelvtechBeadando\NyelvtechBead.Console\bin\Debug\netcoreapp3.1\train.windowd_form_lemma.tsv";
         private static string MODEL_FILEPATH = @"C:\Users\balint\AppData\Local\Temp\MLVSTools\NyelvtechBeadandoML\NyelvtechBeadandoML.Model\MLModel.zip";
         // Create MLContext to be shared across the model creation workflow objects 
         // Set a random seed for repeatable/deterministic results across multiple trainings.
@@ -45,9 +45,8 @@ namespace NyelvtechBeadandoML.ConsoleApp
         {
             // Data process configuration with pipeline data transformations 
             var dataProcessPipeline = mlContext.Transforms.Conversion.MapValueToKey("PARSEME:MWE", "PARSEME:MWE")
-                                      .Append(mlContext.Transforms.Categorical.OneHotEncoding(new[] { new InputOutputColumnPair("UPOS", "UPOS"), new InputOutputColumnPair("XPOS", "XPOS"), new InputOutputColumnPair("FEATS", "FEATS"), new InputOutputColumnPair("DEPREL", "DEPREL"), new InputOutputColumnPair("DEPS", "DEPS"), new InputOutputColumnPair("MISC", "MISC") }))
-                                      .Append(mlContext.Transforms.Categorical.OneHotHashEncoding(new[] { new InputOutputColumnPair("FORM", "FORM"), new InputOutputColumnPair("LEMMA", "LEMMA") }))
-                                      .Append(mlContext.Transforms.Concatenate("Features", new[] { "UPOS", "XPOS", "FEATS", "DEPREL", "DEPS", "MISC", "FORM", "LEMMA", "ID", "HEAD" }))
+                                      .Append(mlContext.Transforms.Categorical.OneHotHashEncoding(new[] { new InputOutputColumnPair("FORM-3", "FORM-3"), new InputOutputColumnPair("LEMMA-3", "LEMMA-3"), new InputOutputColumnPair("FORM-2", "FORM-2"), new InputOutputColumnPair("LEMMA-2", "LEMMA-2"), new InputOutputColumnPair("FORM-1", "FORM-1"), new InputOutputColumnPair("LEMMA-1", "LEMMA-1"), new InputOutputColumnPair("FORM0", "FORM0"), new InputOutputColumnPair("LEMMA0", "LEMMA0"), new InputOutputColumnPair("FORM+1", "FORM+1"), new InputOutputColumnPair("LEMMA+1", "LEMMA+1"), new InputOutputColumnPair("FORM+2", "FORM+2"), new InputOutputColumnPair("LEMMA+2", "LEMMA+2"), new InputOutputColumnPair("FORM+3", "FORM+3"), new InputOutputColumnPair("LEMMA+3", "LEMMA+3") }))
+                                      .Append(mlContext.Transforms.Concatenate("Features", new[] { "FORM-3", "LEMMA-3", "FORM-2", "LEMMA-2", "FORM-1", "LEMMA-1", "FORM0", "LEMMA0", "FORM+1", "LEMMA+1", "FORM+2", "LEMMA+2", "FORM+3", "LEMMA+3" }))
                                       .Append(mlContext.Transforms.NormalizeMinMax("Features", "Features"))
                                       .AppendCacheCheckpoint(mlContext);
             // Set the training algorithm 

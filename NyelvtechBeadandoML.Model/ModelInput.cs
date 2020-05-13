@@ -6,47 +6,63 @@ namespace NyelvtechBeadandoML.Model
 {
     public class ModelInput
     {
-        [ColumnName("ID"), LoadColumn(0)]
-        public float ID { get; set; }
+        [ColumnName("FORM-3"), LoadColumn(0)]
+        public string FORM_m3 { get; set; }
 
 
-        [ColumnName("FORM"), LoadColumn(1)]
-        public string FORM { get; set; }
+        [ColumnName("LEMMA-3"), LoadColumn(1)]
+        public string LEMMA_m3 { get; set; }
 
 
-        [ColumnName("LEMMA"), LoadColumn(2)]
-        public string LEMMA { get; set; }
+        [ColumnName("FORM-2"), LoadColumn(2)]
+        public string FORM_m2 { get; set; }
 
 
-        [ColumnName("UPOS"), LoadColumn(3)]
-        public string UPOS { get; set; }
+        [ColumnName("LEMMA-2"), LoadColumn(3)]
+        public string LEMMA_m2 { get; set; }
 
 
-        [ColumnName("XPOS"), LoadColumn(4)]
-        public string XPOS { get; set; }
+        [ColumnName("FORM-1"), LoadColumn(4)]
+        public string FORM_m1 { get; set; }
 
 
-        [ColumnName("FEATS"), LoadColumn(5)]
-        public string FEATS { get; set; }
+        [ColumnName("LEMMA-1"), LoadColumn(5)]
+        public string LEMMA_m1 { get; set; }
 
 
-        [ColumnName("HEAD"), LoadColumn(6)]
-        public float HEAD { get; set; }
+        [ColumnName("FORM0"), LoadColumn(6)]
+        public string FORM0 { get; set; }
 
 
-        [ColumnName("DEPREL"), LoadColumn(7)]
-        public string DEPREL { get; set; }
+        [ColumnName("LEMMA0"), LoadColumn(7)]
+        public string LEMMA0 { get; set; }
 
 
-        [ColumnName("DEPS"), LoadColumn(8)]
-        public string DEPS { get; set; }
+        [ColumnName("FORM+1"), LoadColumn(8)]
+        public string FORM_p1 { get; set; }
 
 
-        [ColumnName("MISC"), LoadColumn(9)]
-        public string MISC { get; set; }
+        [ColumnName("LEMMA+1"), LoadColumn(9)]
+        public string LEMMA_p1 { get; set; }
 
 
-        [ColumnName("PARSEME:MWE"), LoadColumn(10)]
+        [ColumnName("FORM+2"), LoadColumn(10)]
+        public string FORM_p2 { get; set; }
+
+
+        [ColumnName("LEMMA+2"), LoadColumn(11)]
+        public string LEMMA_p2 { get; set; }
+
+
+        [ColumnName("FORM+3"), LoadColumn(12)]
+        public string FORM_p3 { get; set; }
+
+
+        [ColumnName("LEMMA+3"), LoadColumn(13)]
+        public string LEMMA_p3 { get; set; }
+
+
+        [ColumnName("PARSEME:MWE"), LoadColumn(14)]
         public string PARSEME_MWE { get; set; }
 
 

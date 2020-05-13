@@ -11,7 +11,7 @@ namespace NyelvtechBeadandoML.ConsoleApp
     class Program
     {
         //Dataset to use for predictions 
-        private const string DATA_FILEPATH = @"C:\Users\balint\OneDrive\itk\Nyelvtech\beadando\HU\train.tsv";
+        private const string DATA_FILEPATH = @"C:\Users\balint\OneDrive\itk\Nyelvtech\beadando\HU\NyelvtechBeadando\NyelvtechBead.Console\bin\Debug\netcoreapp3.1\train.windowd_form_lemma.tsv";
 
         static void Main(string[] args)
         {
@@ -22,16 +22,20 @@ namespace NyelvtechBeadandoML.ConsoleApp
             var predictionResult = ConsumeModel.Predict(sampleData);
 
             Console.WriteLine("Using model to make single prediction -- Comparing actual PARSEME_MWE with predicted PARSEME_MWE from sample data...\n\n");
-            Console.WriteLine($"ID: {sampleData.ID}");
-            Console.WriteLine($"FORM: {sampleData.FORM}");
-            Console.WriteLine($"LEMMA: {sampleData.LEMMA}");
-            Console.WriteLine($"UPOS: {sampleData.UPOS}");
-            Console.WriteLine($"XPOS: {sampleData.XPOS}");
-            Console.WriteLine($"FEATS: {sampleData.FEATS}");
-            Console.WriteLine($"HEAD: {sampleData.HEAD}");
-            Console.WriteLine($"DEPREL: {sampleData.DEPREL}");
-            Console.WriteLine($"DEPS: {sampleData.DEPS}");
-            Console.WriteLine($"MISC: {sampleData.MISC}");
+            Console.WriteLine($"FORM-3: {sampleData.FORM_3}");
+            Console.WriteLine($"LEMMA-3: {sampleData.LEMMA_3}");
+            Console.WriteLine($"FORM-2: {sampleData.FORM_2}");
+            Console.WriteLine($"LEMMA-2: {sampleData.LEMMA_2}");
+            Console.WriteLine($"FORM-1: {sampleData.FORM_1}");
+            Console.WriteLine($"LEMMA-1: {sampleData.LEMMA_1}");
+            Console.WriteLine($"FORM0: {sampleData.FORM0}");
+            Console.WriteLine($"LEMMA0: {sampleData.LEMMA0}");
+            Console.WriteLine($"FORM+1: {sampleData.FORM_1}");
+            Console.WriteLine($"LEMMA+1: {sampleData.LEMMA_1}");
+            Console.WriteLine($"FORM+2: {sampleData.FORM_2}");
+            Console.WriteLine($"LEMMA+2: {sampleData.LEMMA_2}");
+            Console.WriteLine($"FORM+3: {sampleData.FORM_3}");
+            Console.WriteLine($"LEMMA+3: {sampleData.LEMMA_3}");
             Console.WriteLine($"\n\nActual PARSEME_MWE: {sampleData.PARSEME_MWE} \nPredicted PARSEME_MWE value {predictionResult.Prediction} \nPredicted PARSEME_MWE scores: [{String.Join(",", predictionResult.Score)}]\n\n");
             Console.WriteLine("=============== End of process, hit any key to finish ===============");
             Console.ReadKey();
