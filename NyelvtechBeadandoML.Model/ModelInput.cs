@@ -6,63 +6,147 @@ namespace NyelvtechBeadandoML.Model
 {
     public class ModelInput
     {
-        [ColumnName("FORM-3"), LoadColumn(0)]
-        public string FORM_m3 { get; set; }
+        [ColumnName("FORMm3"), LoadColumn(0)]
+        public string FORMm3 { get; set; }
 
 
-        [ColumnName("LEMMA-3"), LoadColumn(1)]
-        public string LEMMA_m3 { get; set; }
+        [ColumnName("LEMMAm3"), LoadColumn(1)]
+        public string LEMMAm3 { get; set; }
 
 
-        [ColumnName("FORM-2"), LoadColumn(2)]
-        public string FORM_m2 { get; set; }
+        [ColumnName("UPOSm3"), LoadColumn(2)]
+        public string UPOSm3 { get; set; }
 
 
-        [ColumnName("LEMMA-2"), LoadColumn(3)]
-        public string LEMMA_m2 { get; set; }
+        [ColumnName("HEADm3"), LoadColumn(3)]
+        public string HEADm3 { get; set; }
 
 
-        [ColumnName("FORM-1"), LoadColumn(4)]
-        public string FORM_m1 { get; set; }
+        [ColumnName("DEPRELm3"), LoadColumn(4)]
+        public string DEPRELm3 { get; set; }
 
 
-        [ColumnName("LEMMA-1"), LoadColumn(5)]
-        public string LEMMA_m1 { get; set; }
+        [ColumnName("FORMm2"), LoadColumn(5)]
+        public string FORMm2 { get; set; }
 
 
-        [ColumnName("FORM0"), LoadColumn(6)]
+        [ColumnName("LEMMAm2"), LoadColumn(6)]
+        public string LEMMAm2 { get; set; }
+
+
+        [ColumnName("UPOSm2"), LoadColumn(7)]
+        public string UPOSm2 { get; set; }
+
+
+        [ColumnName("HEADm2"), LoadColumn(8)]
+        public string HEADm2 { get; set; }
+
+
+        [ColumnName("DEPRELm2"), LoadColumn(9)]
+        public string DEPRELm2 { get; set; }
+
+
+        [ColumnName("FORMm1"), LoadColumn(10)]
+        public string FORMm1 { get; set; }
+
+
+        [ColumnName("LEMMAm1"), LoadColumn(11)]
+        public string LEMMAm1 { get; set; }
+
+
+        [ColumnName("UPOSm1"), LoadColumn(12)]
+        public string UPOSm1 { get; set; }
+
+
+        [ColumnName("HEADm1"), LoadColumn(13)]
+        public string HEADm1 { get; set; }
+
+
+        [ColumnName("DEPRELm1"), LoadColumn(14)]
+        public string DEPRELm1 { get; set; }
+
+
+        [ColumnName("FORM0"), LoadColumn(15)]
         public string FORM0 { get; set; }
 
 
-        [ColumnName("LEMMA0"), LoadColumn(7)]
+        [ColumnName("LEMMA0"), LoadColumn(16)]
         public string LEMMA0 { get; set; }
 
 
-        [ColumnName("FORM+1"), LoadColumn(8)]
-        public string FORM_p1 { get; set; }
+        [ColumnName("UPOS0"), LoadColumn(17)]
+        public string UPOS0 { get; set; }
 
 
-        [ColumnName("LEMMA+1"), LoadColumn(9)]
-        public string LEMMA_p1 { get; set; }
+        [ColumnName("HEAD0"), LoadColumn(18)]
+        public float HEAD0 { get; set; }
 
 
-        [ColumnName("FORM+2"), LoadColumn(10)]
-        public string FORM_p2 { get; set; }
+        [ColumnName("DEPREL0"), LoadColumn(19)]
+        public string DEPREL0 { get; set; }
 
 
-        [ColumnName("LEMMA+2"), LoadColumn(11)]
-        public string LEMMA_p2 { get; set; }
+        [ColumnName("FORMp1"), LoadColumn(20)]
+        public string FORMp1 { get; set; }
 
 
-        [ColumnName("FORM+3"), LoadColumn(12)]
-        public string FORM_p3 { get; set; }
+        [ColumnName("LEMMAp1"), LoadColumn(21)]
+        public string LEMMAp1 { get; set; }
 
 
-        [ColumnName("LEMMA+3"), LoadColumn(13)]
-        public string LEMMA_p3 { get; set; }
+        [ColumnName("UPOSp1"), LoadColumn(22)]
+        public string UPOSp1 { get; set; }
 
 
-        [ColumnName("PARSEME:MWE"), LoadColumn(14)]
+        [ColumnName("HEADp1"), LoadColumn(23)]
+        public string HEADp1 { get; set; }
+
+
+        [ColumnName("DEPRELp1"), LoadColumn(24)]
+        public string DEPRELp1 { get; set; }
+
+
+        [ColumnName("FORMp2"), LoadColumn(25)]
+        public string FORMp2 { get; set; }
+
+
+        [ColumnName("LEMMAp2"), LoadColumn(26)]
+        public string LEMMAp2 { get; set; }
+
+
+        [ColumnName("UPOSp2"), LoadColumn(27)]
+        public string UPOSp2 { get; set; }
+
+
+        [ColumnName("HEADp2"), LoadColumn(28)]
+        public string HEADp2 { get; set; }
+
+
+        [ColumnName("DEPRELp2"), LoadColumn(29)]
+        public string DEPRELp2 { get; set; }
+
+
+        [ColumnName("FORMp3"), LoadColumn(30)]
+        public string FORMp3 { get; set; }
+
+
+        [ColumnName("LEMMAp3"), LoadColumn(31)]
+        public string LEMMAp3 { get; set; }
+
+
+        [ColumnName("UPOSp3"), LoadColumn(32)]
+        public string UPOSp3 { get; set; }
+
+
+        [ColumnName("HEADp3"), LoadColumn(33)]
+        public string HEADp3 { get; set; }
+
+
+        [ColumnName("DEPRELp3"), LoadColumn(34)]
+        public string DEPRELp3 { get; set; }
+
+
+        [ColumnName("PARSEME:MWE"), LoadColumn(35)]
         public string PARSEME_MWE { get; set; }
 
 

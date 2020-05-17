@@ -11,7 +11,7 @@ namespace NyelvtechBeadandoML.ConsoleApp
     class Program
     {
         //Dataset to use for predictions 
-        private const string DATA_FILEPATH = @"C:\Users\balint\OneDrive\itk\Nyelvtech\beadando\HU\NyelvtechBeadando\NyelvtechBead.Console\bin\Debug\netcoreapp3.1\train.windowd_form_lemma.tsv";
+        private const string DATA_FILEPATH = @"C:\Users\balint\OneDrive\itk\Nyelvtech\beadando\HU\NyelvtechBeadando\NyelvtechBead.Console\bin\Debug\netcoreapp3.1\train.mlnet.sen_w3_12367.tsv";
 
         static void Main(string[] args)
         {
@@ -22,20 +22,41 @@ namespace NyelvtechBeadandoML.ConsoleApp
             var predictionResult = ConsumeModel.Predict(sampleData);
 
             Console.WriteLine("Using model to make single prediction -- Comparing actual PARSEME_MWE with predicted PARSEME_MWE from sample data...\n\n");
-            Console.WriteLine($"FORM-3: {sampleData.FORM_3}");
-            Console.WriteLine($"LEMMA-3: {sampleData.LEMMA_3}");
-            Console.WriteLine($"FORM-2: {sampleData.FORM_2}");
-            Console.WriteLine($"LEMMA-2: {sampleData.LEMMA_2}");
-            Console.WriteLine($"FORM-1: {sampleData.FORM_1}");
-            Console.WriteLine($"LEMMA-1: {sampleData.LEMMA_1}");
+            Console.WriteLine($"FORMm3: {sampleData.FORMm3}");
+            Console.WriteLine($"LEMMAm3: {sampleData.LEMMAm3}");
+            Console.WriteLine($"UPOSm3: {sampleData.UPOSm3}");
+            Console.WriteLine($"HEADm3: {sampleData.HEADm3}");
+            Console.WriteLine($"DEPRELm3: {sampleData.DEPRELm3}");
+            Console.WriteLine($"FORMm2: {sampleData.FORMm2}");
+            Console.WriteLine($"LEMMAm2: {sampleData.LEMMAm2}");
+            Console.WriteLine($"UPOSm2: {sampleData.UPOSm2}");
+            Console.WriteLine($"HEADm2: {sampleData.HEADm2}");
+            Console.WriteLine($"DEPRELm2: {sampleData.DEPRELm2}");
+            Console.WriteLine($"FORMm1: {sampleData.FORMm1}");
+            Console.WriteLine($"LEMMAm1: {sampleData.LEMMAm1}");
+            Console.WriteLine($"UPOSm1: {sampleData.UPOSm1}");
+            Console.WriteLine($"HEADm1: {sampleData.HEADm1}");
+            Console.WriteLine($"DEPRELm1: {sampleData.DEPRELm1}");
             Console.WriteLine($"FORM0: {sampleData.FORM0}");
             Console.WriteLine($"LEMMA0: {sampleData.LEMMA0}");
-            Console.WriteLine($"FORM+1: {sampleData.FORM_1}");
-            Console.WriteLine($"LEMMA+1: {sampleData.LEMMA_1}");
-            Console.WriteLine($"FORM+2: {sampleData.FORM_2}");
-            Console.WriteLine($"LEMMA+2: {sampleData.LEMMA_2}");
-            Console.WriteLine($"FORM+3: {sampleData.FORM_3}");
-            Console.WriteLine($"LEMMA+3: {sampleData.LEMMA_3}");
+            Console.WriteLine($"UPOS0: {sampleData.UPOS0}");
+            Console.WriteLine($"HEAD0: {sampleData.HEAD0}");
+            Console.WriteLine($"DEPREL0: {sampleData.DEPREL0}");
+            Console.WriteLine($"FORMp1: {sampleData.FORMp1}");
+            Console.WriteLine($"LEMMAp1: {sampleData.LEMMAp1}");
+            Console.WriteLine($"UPOSp1: {sampleData.UPOSp1}");
+            Console.WriteLine($"HEADp1: {sampleData.HEADp1}");
+            Console.WriteLine($"DEPRELp1: {sampleData.DEPRELp1}");
+            Console.WriteLine($"FORMp2: {sampleData.FORMp2}");
+            Console.WriteLine($"LEMMAp2: {sampleData.LEMMAp2}");
+            Console.WriteLine($"UPOSp2: {sampleData.UPOSp2}");
+            Console.WriteLine($"HEADp2: {sampleData.HEADp2}");
+            Console.WriteLine($"DEPRELp2: {sampleData.DEPRELp2}");
+            Console.WriteLine($"FORMp3: {sampleData.FORMp3}");
+            Console.WriteLine($"LEMMAp3: {sampleData.LEMMAp3}");
+            Console.WriteLine($"UPOSp3: {sampleData.UPOSp3}");
+            Console.WriteLine($"HEADp3: {sampleData.HEADp3}");
+            Console.WriteLine($"DEPRELp3: {sampleData.DEPRELp3}");
             Console.WriteLine($"\n\nActual PARSEME_MWE: {sampleData.PARSEME_MWE} \nPredicted PARSEME_MWE value {predictionResult.Prediction} \nPredicted PARSEME_MWE scores: [{String.Join(",", predictionResult.Score)}]\n\n");
             Console.WriteLine("=============== End of process, hit any key to finish ===============");
             Console.ReadKey();

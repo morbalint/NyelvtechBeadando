@@ -1,13 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Collections.Immutable;
-namespace NyelvtechBead.Console
+﻿namespace NyelvtechBead.Console
 {
     public class Program
     {
-        static void Main(string[] args)
+        private static void Main(string[] args)
         {
-            // WindowedFormPrediction.mainPrepareTraining();
+            //WindowedFormPrediction.mainPrepareTraining();
             WindowedFormPrediction.mainPredict();
         }
     }

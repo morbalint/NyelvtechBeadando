@@ -18,13 +18,10 @@ namespace NyelvtechBead.Console
                 predEngine = mlContext.Model.CreatePredictionEngine<ModelInput, ModelOutput>(mlModel);
             }
 
-            // For more info on consuming ML.NET models, visit https://aka.ms/model-builder-consume
-            // Method for consuming model in your app
-            public ModelOutput Predict(ModelInput input)
-            {
-                // Use model to make prediction on input data
-                var result = predEngine.Predict(input);
-                return result;
-        }
+        // For more info on consuming ML.NET models, visit https://aka.ms/model-builder-consume
+        // Method for consuming model in your app
+        public ModelOutput Predict(ModelInput input) =>
+            // Use model to make prediction on input data
+            predEngine.Predict(input);
     }
 }
